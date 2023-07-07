@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Radio </title>
+</head>
+<body>
+<button id="randomButton">Pick Random Song</button>
+<p id="selectedSong"></p>
+</body>
+<script>
+const songs = ["Song 1", "Song 2", "Song 3", "Song 4", "Song 5"];
+
+const randomButton = document.getElementById('randomButton');
+const selectedSong = document.getElementById('selectedSong');
+
+randomButton.addEventListener('click', () => {
+  // Get a random index within the range of the songs array
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  
+  // Get the randomly selected song
+  const randomSong = songs[randomIndex];
+  
+  // Display the selected song
+  selectedSong.textContent = randomSong;
+});
+
+</script>
+<style>
+/* Style the random button */
+#randomButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#randomButton:hover {
+  background-color: #0056b3;
+}
+
+/* Style the selected song text */
+#selectedSong {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+</style>
+</html>
